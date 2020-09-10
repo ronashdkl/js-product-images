@@ -48,3 +48,7 @@ KodProductImage([
     '/assets/images/6.jpg',
 ])();
 ```
+
+**Screenshot**
+
+![image](https://github.com/ronashdkl/js-product-images/blob/master/Screenshot.png?raw=true)
