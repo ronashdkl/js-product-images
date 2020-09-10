@@ -19,7 +19,7 @@ By Ronash Dhakal. Version 0.0.0
 **User Guide**
 
 * Link style and script in html file from dist folder.
-* copy assets directory to your projrct directory.
+* copy assets directory to your project directory.
 * copy and paste following code inside html body
 
 ``` htmlbars
