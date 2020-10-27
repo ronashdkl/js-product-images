@@ -4,7 +4,7 @@ By Ronash Dhakal. Version 0.0.0
 
 **Todo**
 
-* [ ] Image zoom
+* [X] Image zoom
 
 <br>
 **Development Guide**
@@ -22,7 +22,7 @@ By Ronash Dhakal. Version 0.0.0
 * copy assets directory to your project directory.
 * copy and paste following code inside html body
 
-``` htmlbars
+```htmlbars
  <div class="kod_product_image">
         <div id="kod_thumbs_wrapper">
           <img src="/assets/n_p.png" class="kod_arrow up" alt="">
@@ -38,7 +38,8 @@ By Ronash Dhakal. Version 0.0.0
 
 <span class="colour" style="color:rgb(220, 220, 170)">KodProductImage(image:array)</span> require images array. i.e url of image
 <br>
-``` javascript
+
+```javascript
 KodProductImage([
     '/assets/images/1.jpg',
     '/assets/images/2.jpg',
