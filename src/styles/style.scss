@@ -1,6 +1,8 @@
+
+
 .kod_product_image {
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
   padding:20px;
   #kod_thumbs_wrapper {
     display: flex;
@@ -40,8 +42,8 @@ Main Image
 
   #kod_image {
     img {
-      max-width: 500px;
-      max-height: 600px;
+    
+      max-height: 320px;
       object-fit: cover;
       cursor: pointer;
       border: 2px solid;
@@ -96,3 +98,5 @@ Main Image
   }
   
 }
+
+@import 'modules/responsive';

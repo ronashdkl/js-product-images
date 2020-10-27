@@ -1,6 +1,7 @@
 import './styles/style.scss';
-
+const ImageZoom = require('./zoomify');
 const KodProductImage = (images:string[]) => {
+    var imagezoom:any;
     /**
      * Selectors
      */
@@ -37,6 +38,7 @@ const KodProductImage = (images:string[]) => {
             } 
             event.target.classList.add('active');
             displayImage.src = event.target.src;
+            zoomify();
         },
 
         arrow:()=>{
@@ -58,6 +60,22 @@ const KodProductImage = (images:string[]) => {
        
     }
 
+    const zoomify = ()=>{
+        var w = window.innerWidth;
+        if(w < 500){
+            return;
+        }
+        if(imagezoom){
+            imagezoom.kill();
+        }
+        var options = {
+            width: 400,
+            zoomWidth: 500,
+            offset: {vertical: 35, horizontal: 0}
+        };
+        imagezoom =new ImageZoom(document.getElementById("kod_image"), options);
+    }
+
     const init = ()=>{
        
         displayImage = document.createElement('img');
@@ -73,7 +91,9 @@ const KodProductImage = (images:string[]) => {
             thumbnail.appendChild(imgElement);
         });
        
-        events.arrow()
+        events.arrow();
+        zoomify();
+
        
     }
 
@@ -82,20 +102,4 @@ const KodProductImage = (images:string[]) => {
    return init;
 }
 
-KodProductImage([
-    '/assets/images/1.jpg',
-    '/assets/images/2.jpg',
-    '/assets/images/3.jpg',
-    '/assets/images/4.jpg',
-    '/assets/images/5.jpg',
-    '/assets/images/6.jpg',
-    '/assets/images/3.jpg',
-    '/assets/images/4.jpg',
-    '/assets/images/5.jpg',
-    '/assets/images/6.jpg',
-    '/assets/images/3.jpg',
-    '/assets/images/4.jpg',
-    '/assets/images/5.jpg',
-    '/assets/images/6.jpg',
-])();
-    
+Object.assign(window, { KodProductImage });

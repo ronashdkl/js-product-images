@@ -1,0 +1,45 @@
+@import 'mixin';
+
+@include breakpoint-sm(max){
+    .kod_product_image{
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    gap: 15px;
+
+        #kod_thumbs_wrapper{
+            #kod_thumbs {
+               
+                flex-direction: row;
+               
+            }
+        }
+}
+
+}
+   
+
+
+@include breakpoint-lg() {
+ .kod_product_image{
+        #kod_image {
+            img {
+                max-height: 440px;
+            }
+    }
+  
+}
+
+}
+
+@include breakpoint-xl() {
+    .kod_product_image{
+           #kod_image {
+               img {
+                max-height: 520px;
+               }
+       }
+     
+   }
+   
+   }

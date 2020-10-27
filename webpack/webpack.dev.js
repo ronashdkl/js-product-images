@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, prod_Path),
-    filename: '[name].[chunkhash].js'
+    filename: 'kod_product.js'
   },
   devtool: 'source-map',
   devServer: {
@@ -59,7 +59,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'kod_product.css'
     }),
     new HtmlWebpackPlugin({
       inject: false,
